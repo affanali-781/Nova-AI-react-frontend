@@ -8,6 +8,8 @@ import AboutHero from "./Components/AboutHero";
 import AboutFooter from "./Components/AboutFooter";
 import Utilities from "./Components/Utilities";
 import RoadMap from "./Components/RoadMap";
+import JoinCommunity from "./Components/JoinCommunity";
+import PageFooter from "./Components/PageFooter";
 import "./App.css";
 
 function App() {
@@ -38,7 +40,9 @@ function App() {
 
 				<Utilities />
 				<RoadMap />
+				<JoinCommunity />
 			</div>
+			<PageFooter />
 		</>
 	);
 }
