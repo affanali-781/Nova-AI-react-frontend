@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import AboutHeader from "./Components/AboutHeader";
 import AboutHero from "./Components/AboutHero";
 import AboutFooter from "./Components/AboutFooter";
+import Utilities from "./Components/Utilities";
+import RoadMap from "./Components/RoadMap";
 import "./App.css";
 
 function App() {
@@ -33,6 +35,9 @@ function App() {
 					<AboutHero />
 					<AboutFooter />
 				</div>
+
+				<Utilities />
+				<RoadMap />
 			</div>
 		</>
 	);
