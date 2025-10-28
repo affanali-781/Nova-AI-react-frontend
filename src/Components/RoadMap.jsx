@@ -4,7 +4,10 @@ import numberImg from "../assets/images/numbers-roadmap.png";
 
 const RoadMap = () => {
 	return (
-		<div className="w-full min-h-screen flex flex-col bg-black text-white px-16 py-20 font-inter">
+		<div
+			id="roadmap"
+			className="w-full min-h-screen flex flex-col bg-black text-white px-16 py-20 font-inter"
+		>
 			{/* ---------- INNER 1: HEADER ---------- */}
 			<div className="flex flex-col items-start gap-4 mb-16 ml-100">
 				<img src={lineImg} alt="green line" className="w-[128.5px]" />

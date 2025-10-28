@@ -9,7 +9,7 @@ const NavBar = () => {
 	return (
 		<nav className="w-full fixed top-0 left-0 z-50 bg-transparent px-10 md:px-10 py-4 flex justify-between items-center">
 			{/* LEFT — LOGO */}
-			<a href="#" className="flex items-center space-x-2">
+			<a href="#home" className="flex items-center space-x-2">
 				<img
 					src={logo}
 					alt="Nova AI Logo"

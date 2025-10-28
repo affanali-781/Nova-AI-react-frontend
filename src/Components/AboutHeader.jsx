@@ -2,7 +2,10 @@ import React from "react";
 
 const AboutHeader = () => {
 	return (
-		<section className="flex flex-col items-center justify-center text-center text-white font-inter pt-32 md:pt-44 px-6 md:px-20">
+		<section
+			id="about"
+			className="flex flex-col items-center justify-center text-center text-white font-inter pt-32 md:pt-44 px-6 md:px-20"
+		>
 			{/* Heading 1 */}
 			<h1 className="text-[64px] sm:text-[76px] md:text-[88px] font-bold text-[#65EC63] leading-tight">
 				What is Nova AI?

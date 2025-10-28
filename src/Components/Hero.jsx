@@ -6,7 +6,10 @@ import blockRight from "../assets/images/block-rb.png";
 
 const HeroSection = () => {
 	return (
-		<section className="relative w-full min-h-screen flex flex-col justify-between items-center text-white font-inter pt-32 md:pt-44 px-6 md:px-20 overflow-hidden">
+		<section
+			id="home"
+			className="relative w-full min-h-screen flex flex-col justify-between items-center text-white font-inter pt-32 md:pt-44 px-6 md:px-20 overflow-hidden"
+		>
 			{/* TOP HALF */}
 			<div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-10 lg:gap-20">
 				{/* LEFT TEXT */}

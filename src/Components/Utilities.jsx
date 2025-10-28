@@ -5,7 +5,10 @@ import buttonsImg from "../assets/images/buttons.png";
 
 const Utilities = () => {
 	return (
-		<div className="w-full max-w-[80%] mx-auto min-h-screen flex flex-col lg:flex-row justify-around bg-black text-white px-6 sm:px-10 lg:px-16 py-20 mt-25">
+		<div
+			id="utilities"
+			className="w-full max-w-[80%] mx-auto min-h-screen flex flex-col lg:flex-row justify-around bg-black text-white px-6 sm:px-10 lg:px-16 py-20 mt-25"
+		>
 			{/* Left Half */}
 			<div className="w-full lg:w-2/5 flex flex-col justify-start gap-6 mb-10 lg:mb-0">
 				{/* Top line */}
