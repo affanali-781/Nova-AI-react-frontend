@@ -4,7 +4,7 @@ import twitterIcon from "../assets/images/twitter.png";
 import telegramIcon from "../assets/images/telegram.png";
 
 const NavBar = () => {
-	const [menuOpen, setMenuOpen] = useState < boolean > false;
+	const [menuOpen, setMenuOpen] = useState();
 
 	return (
 		<nav className="w-full fixed top-0 left-0 z-[9999] bg-black/50 px-6 md:px-10 py-4 flex justify-between items-center backdrop-blur-md">
