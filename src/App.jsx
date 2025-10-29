@@ -12,17 +12,18 @@ import JoinCommunity from "./Components/JoinCommunity";
 import PageFooter from "./Components/PageFooter";
 import "./App.css";
 
-function App() {
+const App = () => {
 	return (
 		<>
 			{/* ----------------------------------------(LANDING PAGE)---------------------------------------- */}
 			<div
-				className="w-full min-h-full bg-cover bg-center bg-no-repeat bg-fixed flex flex-col"
+				className="w-full min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex flex-col overflow-x-hidden"
 				style={{
 					backgroundImage: `url(${bgImage})`,
 				}}
 			>
 				<NavBar />
+
 				<main className="flex flex-col flex-1 justify-start items-center px-4 sm:px-6 md:px-10 pt-[80px]">
 					<Hero />
 				</main>
@@ -30,8 +31,8 @@ function App() {
 				<footer className="w-full">
 					<Footer />
 				</footer>
-				{/* ----------------------------------------(ABOUT PAGE)---------------------------------------- */}
 
+				{/* ----------------------------------------(ABOUT PAGE)---------------------------------------- */}
 				<div className="w-full min-h-full block">
 					<AboutHeader />
 					<AboutHero />
@@ -42,9 +43,13 @@ function App() {
 				<RoadMap />
 				<JoinCommunity />
 			</div>
-			<PageFooter />
+
+			{/* Page Footer (Separate Section) */}
+			<div className="w-full">
+				<PageFooter />
+			</div>
 		</>
 	);
-}
+};
 
 export default App;

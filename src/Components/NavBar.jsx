@@ -4,10 +4,10 @@ import twitterIcon from "../assets/images/twitter.png";
 import telegramIcon from "../assets/images/telegram.png";
 
 const NavBar = () => {
-	const [menuOpen, setMenuOpen] = useState(false);
+	const [menuOpen, setMenuOpen] = useState < boolean > false;
 
 	return (
-		<nav className="w-full fixed top-0 left-0 z-50 bg-transparent px-10 md:px-10 py-4 flex justify-between items-center">
+		<nav className="w-full fixed top-0 left-0 z-[9999] bg-black/50 px-6 md:px-10 py-4 flex justify-between items-center backdrop-blur-md">
 			{/* LEFT — LOGO */}
 			<a href="#home" className="flex items-center space-x-2">
 				<img
@@ -17,7 +17,7 @@ const NavBar = () => {
 				/>
 			</a>
 
-			{/* CENTER — NAV LINKS (Hidden on small screens) */}
+			{/* CENTER — NAV LINKS (Hidden on Mobile) */}
 			<ul className="hidden md:flex items-center bg-[#111C14]/90 rounded-full px-8 py-3 space-x-8 shadow-lg">
 				{["Home", "About", "Tokenomics", "Utilities", "Roadmap"].map((item) => (
 					<li key={item}>
@@ -37,7 +37,7 @@ const NavBar = () => {
 				</li>
 			</ul>
 
-			{/* RIGHT — SOCIAL ICONS */}
+			{/* RIGHT — SOCIAL ICONS + TOGGLE */}
 			<div className="flex items-center space-x-2">
 				{/* Desktop Icons */}
 				<div className="hidden sm:flex space-x-2">
@@ -48,7 +48,7 @@ const NavBar = () => {
 						<img
 							src={twitterIcon}
 							alt="Twitter"
-							className="w-10 h-10 md:w-8 md:h-8 object-contain"
+							className="w-6 h-6 object-contain"
 						/>
 					</a>
 					<a
@@ -58,37 +58,42 @@ const NavBar = () => {
 						<img
 							src={telegramIcon}
 							alt="Telegram"
-							className="w-10 h-10 md:w-8 md:h-8 object-contain"
+							className="w-6 h-6 object-contain"
 						/>
 					</a>
 				</div>
 
-				{/* MOBILE MENU BUTTON */}
+				{/* MOBILE MENU TOGGLE */}
 				<button
-					className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none ml-2"
+					className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none ml-2 group"
 					onClick={() => setMenuOpen(!menuOpen)}
 				>
+					{/* Top Line */}
 					<span
-						className={`block w-10 h-0.5 bg-white transition-transform duration-300 ${
-							menuOpen ? "rotate-45 translate-y-1.5" : ""
-						}`}
+						className={`block w-8 h-[3px] rounded-full bg-white transition-transform duration-300 ${
+							menuOpen ? "rotate-45 translate-y-[6px]" : ""
+						} group-hover:bg-green-400`}
 					></span>
+
+					{/* Middle Line */}
 					<span
-						className={`block w-10 h-0.5 bg-white transition-opacity duration-300 ${
+						className={`block w-8 h-[3px] rounded-full bg-white transition-opacity duration-300 ${
 							menuOpen ? "opacity-0" : ""
-						}`}
+						} group-hover:bg-green-400`}
 					></span>
+
+					{/* Bottom Line */}
 					<span
-						className={`block w-10 h-0.5 bg-white transition-transform duration-300 ${
-							menuOpen ? "-rotate-45 -translate-y-1.5" : ""
-						}`}
+						className={`block w-8 h-[3px] rounded-full bg-white transition-transform duration-300 ${
+							menuOpen ? "-rotate-45 -translate-y-[6px]" : ""
+						} group-hover:bg-green-400`}
 					></span>
 				</button>
 			</div>
 
 			{/* MOBILE MENU */}
 			{menuOpen && (
-				<div className="absolute top-[70px] left-0 w-full bg-[#111C14]/95 backdrop-blur-md py-10 flex flex-col items-center space-y-5 md:hidden transition-all duration-300">
+				<div className="absolute top-[70px] left-0 w-full z-[9998] bg-[#111C14]/95 backdrop-blur-md py-10 flex flex-col items-center space-y-5 md:hidden transition-all duration-300">
 					{["Home", "About", "Tokenomics", "Utilities", "Roadmap"].map(
 						(item) => (
 							<a
